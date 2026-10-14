@@ -1,0 +1,36 @@
+/* FL Studio Cyber Dark-Blue Palette */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap');
+
+:root {
+  --bg-main: #06080d;
+  --bg-surface: #0c1220;
+  --bg-card: rgba(14, 21, 38, 0.7);
+  --border-neon: rgba(0, 210, 255, 0.2);
+  --border-glow: rgba(0, 210, 255, 0.45);
+  --accent-cyan: #00d2ff;
+  --accent-blue: #2563eb;
+  --accent-violet: #7c3aed;
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', -apple-system, sans-serif;
+  background: radial-gradient(circle at 50% 0%, #111a30 0%, #06080d 75%);
+  background-attachment: fixed;
+  color: var(--text-main);
+  min-height: 100vh;
+}
+
+a {
+  color: var(--accent-cyan);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+a:hover {
+  color: #38bdf8;
+  text-shadow: 0 0 8px rgba(0, 210, 255, 0.5);
+}
