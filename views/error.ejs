@@ -1,3 +1,7 @@
-<h1><%= message %></h1>
-<h2><%= error.status %></h2>
-<pre><%= error.stack %></pre>
+<% layout('./layout/page.ejs') %>
+
+<div class="plugin-card" style="border-color: #ef4444;">
+  <h1 style="color: #ef4444;"><%= message %></h1>
+  <h2><%= error.status %></h2>
+  <pre style="color: #94a3b8;"><%= error.stack %></pre>
+</div>

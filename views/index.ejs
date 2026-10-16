@@ -1,11 +1,6 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
-</html>
+<% layout('./layout/page.ejs') %>
+
+<div class="plugin-card">
+  <h1 style="color: #00d2ff; margin-top: 0;"><%= title %></h1>
+  <p style="color: #94a3b8; font-size: 1.1rem;">Добро пожаловать в проект <b><%= title %></b> — цифровую звуковую станцию и каталог фирменных синтезаторов.</p>
+</div>

@@ -34,3 +34,54 @@ a:hover {
   color: #38bdf8;
   text-shadow: 0 0 8px rgba(0, 210, 255, 0.5);
 }
+
+/* Master Layout Enhancements */
+.daw-header {
+  border-bottom: 1px solid var(--border-neon);
+  background: rgba(10, 15, 26, 0.85);
+  backdrop-filter: blur(12px);
+  padding: 15px 30px;
+}
+
+.daw-brand {
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  background: linear-gradient(135deg, #00d2ff 0%, #3b82f6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.daw-status-badge {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+  padding: 4px 10px;
+  border-radius: 6px;
+  background: rgba(0, 210, 255, 0.1);
+  border: 1px solid rgba(0, 210, 255, 0.25);
+  color: #38bdf8;
+}
+
+.plugin-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-neon);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.plugin-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-glow);
+  box-shadow: 0 15px 35px rgba(0, 210, 255, 0.15);
+}
+
+.plugin-img {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  margin: 15px 0;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+}
