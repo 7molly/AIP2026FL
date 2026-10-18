@@ -6,12 +6,30 @@
    <link rel='stylesheet' href='/stylesheets/style.css' />
  </head>
  <body>
-   <header class="daw-header">
-     <div class="container d-flex justify-content-between align-items-center">
-       <div class="daw-brand">FL STUDIO</div>
-       <div class="daw-status-badge">140 BPM • 44.1 kHz</div>
+   <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+     <div class="container">
+       <a class="navbar-brand" href="/">
+         <span style="color: #00d2ff; font-size: 1.3rem;">🎹</span> FL STUDIO
+       </a>
+       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+         <span class="navbar-toggler-icon"></span>
+       </button>
+       <div class="collapse navbar-collapse" id="navbarSupportedContent">
+         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+           <li class="nav-item">
+             <a class="nav-link" href="/sytrus">Sytrus</a>
+           </li>
+           <li class="nav-item">
+             <a class="nav-link" href="/harmor">Harmor</a>
+           </li>
+           <li class="nav-item">
+             <a class="nav-link" href="/grossbeat">Gross Beat</a>
+           </li>
+         </ul>
+         <div class="daw-status-badge d-none d-md-block">140 BPM • 44.1 kHz</div>
+       </div>
      </div>
-   </header>
+   </nav>
    <main class="container my-4">
      <%- body %>
    </main>
