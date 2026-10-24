@@ -1,13 +1,11 @@
 const mongoose = require('mongoose');
 mongoose.connect('mongodb://127.0.0.1:27017/testMongoose2024');
 
-var schema = mongoose.Schema({ name: String });
+var Plugin = require('./models/plugin.js').Plugin;
 
-schema.methods.play = function() {
-  console.log(this.name + " воспроизводит звук на частоте 440 Hz (Нота A4)");
-};
+var plugin = new Plugin({
+  title: "Sytrus",
+  nick: "sytrus"
+});
 
-const Plugin = mongoose.model('Plugin', schema);
-
-const item = new Plugin({ name: 'Sytrus' });
-item.save().then(() => item.play());
+plugin.save();
