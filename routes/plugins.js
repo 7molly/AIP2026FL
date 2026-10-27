@@ -2,11 +2,6 @@ var express = require('express');
 var router = express.Router();
 var Plugin = require('../models/plugin').Plugin;
 
-/* GET plugins listing. */
-router.get('/', function(req, res, next) {
-  res.send('Новый маршрутизатор для плагинов FL Studio');
-});
-
 /* Страница плагинов */
 router.get("/:nick", async function(req, res, next) {
   try {
