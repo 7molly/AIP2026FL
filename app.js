@@ -5,6 +5,8 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var mongoose = require('mongoose');
 var session = require('express-session');
+var MongoStore = require('connect-mongo');
+if (!MongoStore.create && MongoStore.MongoStore) MongoStore = MongoStore.MongoStore;
 mongoose.connect('mongodb://127.0.0.1:27017/flstudio2026');
 
 var indexRouter = require('./routes/index');
@@ -30,7 +32,8 @@ app.use(session({
   cookie: { maxAge: 60 * 1000 },
   proxy: true,
   resave: true,
-  saveUninitialized: true
+  saveUninitialized: true,
+  store: MongoStore.create({ mongoUrl: 'mongodb://127.0.0.1:27017/flstudio2026' })
 }));
 
 app.use('/', indexRouter);
