@@ -1,12 +1,14 @@
 <% layout('./layout/page.ejs') %>
 
-<div class="plugin-card">
+<div class="plugin-card mb-4">
   <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
     <div>
       <h1 style="color: #00d2ff; font-weight: 800; margin: 0;">FL Studio Hub</h1>
       <p class="text-secondary mt-1 mb-0">Интерактивный портал инструментов и истории легендарной рабочей станции.</p>
     </div>
-    <div class="daw-status-badge">DAW EDITION 2026</div>
+    <div class="counter-badge">
+      <span class="pulse-dot"></span> Счётчик сессии: <b><%= counter %></b>
+    </div>
   </div>
 </div>
 
