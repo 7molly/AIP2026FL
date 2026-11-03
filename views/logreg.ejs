@@ -6,14 +6,14 @@
      <h2 style="color: #00d2ff; font-weight: 800; margin-top: 10px;">Вход в FL Studio</h2>
      <p class="text-secondary small">Введите логин и пароль. Если учетной записи ещё нет, она будет создана автоматически.</p>
    </div>
-   <form class="form-horizontal">
+   <form class="form-horizontal" action="/logreg" method="post">
        <div class="mb-3">
            <label class="form-label text-secondary small">Имя пользователя</label>
-           <input class="form-control form-control-custom" type="text" placeholder="Например, producer" />
+           <input class="form-control form-control-custom" type="text" placeholder="Например, producer" name="username" required />
        </div>
        <div class="mb-4">
            <label class="form-label text-secondary small">Пароль</label>
-           <input class="form-control form-control-custom" type="password" placeholder="Введите пароль" />
+           <input class="form-control form-control-custom" type="password" placeholder="Введите пароль" name="password" required />
        </div>
        <button class="btn btn-cyan w-100" type="submit">Войти в систему</button>
    </form>
