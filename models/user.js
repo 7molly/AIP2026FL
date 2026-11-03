@@ -34,4 +34,8 @@ userSchema.virtual("password").set(function(password) {
   return this._purePassword;
 });
 
+userSchema.methods.checkPassword = function(password) {
+  return this.encryptPassword(password) === this.hashedPassword;
+};
+
 module.exports.User = mongoose.model("User", userSchema);
