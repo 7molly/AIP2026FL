@@ -15,6 +15,12 @@
            <label class="form-label text-secondary small">Пароль</label>
            <input class="form-control form-control-custom" type="password" placeholder="Введите пароль" name="password" required />
        </div>
-       <button class="btn btn-cyan w-100" type="submit">Войти в систему</button>
+       <button class="btn btn-cyan w-100 mb-3" type="submit">Войти в систему</button>
+       
+       <% if(typeof error !== 'undefined' && error) { %>
+           <div class="alert alert-danger" style="background: rgba(239, 68, 68, 0.15); border: 1px solid rgba(239, 68, 68, 0.4); color: #fca5a5; border-radius: 10px;">
+             <%= error %>
+           </div>
+       <% } %>
    </form>
 </div>
