@@ -6,11 +6,11 @@
       <% if(user) { %>
          <div class="section-badge"><span class="pulse-dot"></span> Студия активна</div>
          <h1 style="color: #00d2ff; font-weight: 800; margin: 0;">Привет, <%= user.username %>!</h1>
-         <p class="text-secondary mt-1 mb-0">Вам открыт доступ ко всем инструментам и страницам синтезаторов FL Studio.</p>
+         <p class="text-secondary mt-1 mb-0">Вам открыт доступ ко всем инструментам и страницам синтезаторов FL Studio в верхнем меню.</p>
       <% } else { %>
          <div class="section-badge" style="border-color: rgba(234, 179, 8, 0.4); color: #facc15;"><span class="pulse-dot" style="background:#facc15;"></span> Гостевой доступ</div>
          <h1 style="color: #00d2ff; font-weight: 800; margin: 0;">Привет, незалогиненный пользователь!</h1>
-         <p class="text-secondary mt-1 mb-0">Пожалуйста, <a href="/logreg">войдите или зарегистрируйтесь</a> для доступа к деталям плагинов.</p>
+         <p class="text-secondary mt-1 mb-0">Страницы плагинов защищены. Пожалуйста, <a href="/logreg" style="font-weight: 600;">войдите в систему</a> для разблокировки контента.</p>
       <% } %>
     </div>
     <div class="counter-badge">

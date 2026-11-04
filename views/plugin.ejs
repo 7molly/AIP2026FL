@@ -1,7 +1,25 @@
 <% layout('./layout/page.ejs') %>
 
 <div class="plugin-card">
-  <h1 style="color: #00d2ff; margin-top: 0;"><%= title %></h1>
-  <img src="<%= picture %>" alt="<%= title %>" class="plugin-img"/>
-  <h4 style="color: #94a3b8; font-weight: normal; margin-top: 15px;">Несколько слов о нашем плагине: <span style="color: #f8fafc;"><%= desc %></span></h4>
+  <div class="d-flex justify-content-between align-items-start flex-wrap gap-2 mb-3">
+    <div>
+      <div class="section-badge"><span class="pulse-dot"></span> FL Studio Native Instrument</div>
+      <h1 style="color: #00d2ff; font-weight: 800; margin: 0;"><%= title %></h1>
+    </div>
+    <div class="daw-status-badge">44.1 kHz • 32-bit Float</div>
+  </div>
+  
+  <div class="text-center my-4">
+    <img src="<%= picture %>" alt="<%= title %>" class="plugin-img" style="max-height: 320px; object-fit: contain;"/>
+  </div>
+  
+  <div class="p-3" style="background: rgba(7, 11, 20, 0.6); border-radius: 12px; border: 1px solid rgba(56, 189, 248, 0.2);">
+    <h5 style="color: #38bdf8; font-weight: 600; margin-bottom: 8px;">О синтезаторе:</h5>
+    <p style="color: #f1f5f9; font-size: 1.05rem; line-height: 1.6; margin: 0;"><%= desc %></p>
+  </div>
+  
+  <div class="mt-4 pt-3 border-top border-secondary-subtle d-flex justify-content-between align-items-center">
+    <a href="/" class="btn btn-outline-info btn-sm" style="border-radius: 8px;">← На главную к истории FL</a>
+    <span class="text-secondary small">Image-Line Software</span>
+  </div>
 </div>
