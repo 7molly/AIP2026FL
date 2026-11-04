@@ -27,9 +27,20 @@
              %>
          </ul>
          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
-           <li class="nav-item">
-             <a class="nav-link" href="/logreg" style="color: #00d2ff !important; font-weight: 600;">Войти</a>
-           </li>
+           <% if(typeof user !== 'undefined' && user){ %>
+             <li class="nav-item d-flex align-items-center gap-2">
+               <span class="badge" style="background: rgba(0, 210, 255, 0.15); color: #38bdf8; border: 1px solid rgba(0, 210, 255, 0.3);">
+                 👤 <%= user.username %>
+               </span>
+               <form action="/logout" method="post" class="d-inline">
+                 <button type="submit" class="btn btn-sm btn-outline-danger" style="border-radius: 8px;">Выйти</button>
+               </form>
+             </li>
+           <% } else { %>
+             <li class="nav-item">
+               <a class="nav-link" href="/logreg" style="color: #00d2ff !important; font-weight: 600;">Войти</a>
+             </li>
+           <% } %>
          </ul>
        </div>
      </div>
